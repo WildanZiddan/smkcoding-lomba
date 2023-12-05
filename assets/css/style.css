@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*---------------------*\
+        NAVBAR
+\*---------------------*/
+.navbar {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 1.6rem 10rem;
+    position: fixed;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.4);
+    z-index: 100;
+}
+
+.navbar div.logo {
+    float: left;
+    height: auto;
+    width: auto;
+}
+
+.navbar div.list {
+    height: 25px;
+    float: right;
+    margin-right: -100px;
+}
+
+.navbar div.list ul {
+    width: 24%;
+    height: 55px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: .7% 0 0 0; 
+}
+
+.navbar div.list ul li {
+    width: 100px;
+    padding: 0;
+}
+
+.navbar div.list ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: .8rem;
+    font-weight: 600;
+    display: flex;
+    width: 90px;
+    transition: all .3s;
+}
+
+.navbar div.list ul li a div.arrow {
+    margin-top: 2.5px;
+    margin-left: 3px;
+}
+
+.navbar div.list ul li a:hover, .navbar div.list ul li a:hover svg path{
+    color: #6C4EEB;
+    fill: #6C4EEB;
+}
+
+/*---------------------*\
+          HOME
+\*---------------------*/
+.home {
+    height: 100vh;
+    background-color: #F0F3FF;
+    padding: 8% 12%;
+}
+
+.container-home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container-home div.text-home {
+    flex: 1;
+    padding: 2.5% 2%;
+}
+.container-home div.text-home h2 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: rgba(0, 0, 0, .8);
+}
+.container-home div.text-home p {
+    font-weight: 500;
+    color: rgba(0, 0, 0, .6);
+}
+
+.container-home div.text-home a.go-btn {
+    display: flex;
+    color: white;
+    background-color: #6C4EEB;
+    width: 170px;
+    height: 40px;
+    text-decoration: none;
+    font-size: .7rem;
+    padding: 2.2% 3%;
+    border-radius: 5px;
+    transition: all .3s;
+    margin-top: 1rem;
+}
+.container-home div.text-home a.go-btn div.arrow-left svg {
+    margin-left: 3rem;
+    margin-top: -.04rem;
+}
+
+.container-home div.text-home a.go-btn:hover, .container-home div.text-home a.go-btn:hover div.arrow-left svg path {
+    color: #6C4EEB;
+    fill: #6C4EEB;
+    background-color: white;
+}
+
+.container-home div.orang-home{
+    flex: 1;
+}
+.container-home div.orang-home img{
+    width: 430px;
+    height: 540px;
+    margin-left: 5rem;
+}
+
+/*---------------------*\
+          ABOUT
+\*---------------------*/
+.end-home {
+    height: 20vh;
+    background-color: #FACB3B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 7%;
+}
+
+.kelebihan {
+    display: flex;
+}
+
+.text-kelebihan {
+    margin-left: 1rem;
+    margin-top: .8rem;
+}
+
+/*---------------------*\
+         KELAS
+\*---------------------*/
+.kelas {
+    height: 130vh;
+    width: 100%;
+    background-color: #F0F3FF;
+    padding: 8% 14% 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-kelas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-kelas {
+    display: flex;
+    font-size: 1.1rem;
+    float: left;
+}
+.title-kelas h2.dua {
+    position: relative;
+    z-index: 2;
+}
+.title-kelas h2.dua::after {
+    content:" ";
+    width: 0;
+    height: 0;
+    border-left: 50px solid rgba(253, 213, 160, .8);
+    border-right: 48px solid rgba(253, 213, 160, .8);
+    border-bottom: 8px solid rgba(253, 213, 160, .8);
+    position: absolute;
+    top: 24px;
+    left: 0;
+    z-index: -1;
+}
+
+.kategori {
+    float: right;
+}
+.kategori .btn-kategori {
+    background-color: #F0F3FF;
+    color: rgba(0, 0, 0, .6);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px 20px;
+    font-size: .9;
+}
+.active, .btn-kategori:hover {
+    color: rgba(0, 0, 0, .8);
+    background-color: #FFFFFF;
+}
+
+.materi {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+    margin-top: 5%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 32vh;
+    height: 42vh;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.text-card {
+    padding: 8% 8%;
+}
+
+.text-card p {
+    font-weight: 600;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.card span {
+    color: #6C4EEB;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.level {
+    display: flex;
+    font-size: .7rem;
+}
+
+.level p {
+    font-weight: 500;
+}
+
+.text1 {
+    display: flex;
+    margin-right: 1rem;
+}
+.text2 {
+    display: flex;
+}
+
+.text1 p, .text2 p {
+    margin-left: .2rem;
+}
+
+.promo {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF0E5;
+    height: 35vh;
+    padding: 0 4%;
+}
+
+.promo a {
+    display: flex;
+    color: white;
+    background-color: #6C4EEB;
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    transition: all .3s;
+    margin-top: 1rem;
+}
+
+.promo a:hover {
+    color: #6C4EEB;
+    background-color: white;
+}
+
+
+/*---------------------*\
+         BLOG
+\*---------------------*/
+.blog {
+    width: 100%;
+    height: 200vh;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    padding: 8% 10%;
+}
+
+.title-blog {
+    display: flex;
+    font-size: 1.1rem;
+    margin: 2% 40%;
+}
+.title-blog h2.dua {
+    position: relative;
+    z-index: 2;
+}
+.title-blog h2.dua::after {
+    content:" ";
+    width: 0;
+    height: 0;
+    border-left: 50px solid rgba(253, 213, 160, .8);
+    border-right: 48px solid rgba(253, 213, 160, .8);
+    border-bottom: 8px solid rgba(253, 213, 160, .8);
+    position: absolute;
+    top: 24px;
+    left: 0;
+    z-index: -1;
+}
+
+.most-kategori {
+    display: grid;
+    gap: 25px;
+    font-size: .8rem;
+    margin-top: 1rem;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card-most {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 18rem;
+    height: 4rem;
+    border-radius: 2px;
+}
+
+.card-text2 {
+    margin-left: 1rem;
+}
+
+.bisnis {
+    width: 100%;
+    height: 68vh;
+    background-color: #d3dcff;
+    margin: 10% 0;
+    padding: 5%;
+    display: flex;
+}
+
+.text-bisnis {
+    padding: 0 5%;
+}
+
+.text-bisnis h2 {
+    font-size: 2rem;    
+}
+
+.text-bisnis p {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .6);
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+.text-bisnis a {
+    text-decoration: none;
+    background-color: #6C4EEB;
+    color: #fff;
+    margin-top: 10rem;
+    padding: 2vh 5vh;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.text-bisnis a:hover {
+    color: #6C4EEB;
+    background-color: #FFFFFF;
+}
+
+.title-blog2 {
+    display: flex;
+    font-size: 1.1rem;
+    margin: 2% 0 2% 30%;
+}
+.title-blog2 h2.duasatu {
+    position: relative;
+    z-index: 2;
+}
+.title-blog2 h2.duasatu::after {
+    content:" ";
+    width: 0;
+    height: 0;
+    border-left: 90px solid rgba(253, 213, 160, .8);
+    border-right: 170px solid rgba(253, 213, 160, .8);
+    border-bottom: 8px solid rgba(253, 213, 160, .8);
+    position: absolute;
+    top: 24px;
+    left: 0;
+    z-index: -1;
+}
